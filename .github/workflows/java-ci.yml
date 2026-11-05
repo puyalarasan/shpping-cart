@@ -18,8 +18,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Compile Java
-        run: javac Main.java
+      - name: Compile Java files
+        run: javac Main.java CartCalculator.java CartCalculatorTest.java
 
-      - name: Run Java
+      - name: Run automated test
+        run: java CartCalculatorTest
+
+      - name: Run Java application
         run: java Main
